@@ -5,23 +5,37 @@ import { IncomingMessage, ServerResponse } from "node:http";
  */
 export type HTTPMethods = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
+// File data interface for multipart form data
+export interface FileData {
+  filename: string;
+  contentType: string;
+  data: Buffer;
+  size: number;
+}
+
+// Multipart form data interface
+export interface MultipartFormData {
+  fields: RecordString;
+  files: Record<string, FileData>;
+}
+
 // Types of Custom request that we gonna expose for our applications
-export interface Request {
+export interface IRequest {
   nodeRequest: IncomingMessage;
   path: string;
   declarationPath: string;
   method: HTTPMethods;
-  query: Record<string, string>;
-  params: Record<string, string>;
-  headers: Record<string, string>;
-  body: string | null | object;
+  query: RecordString;
+  params: RecordString;
+  headers: RecordString;
+  body: string | null | object | MultipartFormData;
 }
 
 // Types of Custom response that we gonna expose for our applications
-export interface Response {
+export interface IResponse {
   nodeResponse: ServerResponse;
   statusCode: number;
-  headers: Record<string, string>;
+  headers: RecordString;
   status(code: number): this;
   setHeaders(key: string, value: string): this;
   send(body: string | object | Buffer | null | File): this;
@@ -30,9 +44,12 @@ export interface Response {
 }
 
 // Types of routes
-export type Router<T> = {
+export type IRouter<T> = {
   path: string;
   method: HTTPMethods;
   middlewares: [];
   handler: () => T | Promise<T>;
 };
+
+// Custom type
+export type RecordString = Record<string, string>;
