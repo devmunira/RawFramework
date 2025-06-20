@@ -1,4 +1,6 @@
+import { Response } from "./Response";
 import { IncomingMessage, ServerResponse } from "node:http";
+import { Request } from "./Request";
 
 /***
  * Allowed methods: get, post, put, patch, delete
@@ -55,7 +57,7 @@ export type IRouter<T> = {
 export type Handler = (
   req: Request,
   res: Response,
-  next: NextFunction
+  next?: NextFunction
 ) => void | Promise<void>;
 
 export type NextFunction = {
