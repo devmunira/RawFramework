@@ -51,5 +51,16 @@ export type IRouter<T> = {
   handler: () => T | Promise<T>;
 };
 
+// Request Handler Type
+export type Handler = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => void | Promise<void>;
+
+export type NextFunction = {
+  (error?: Error): void;
+};
+
 // Custom type
 export type RecordString = Record<string, string>;
