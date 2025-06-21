@@ -66,3 +66,27 @@ export type NextFunction = {
 
 // Custom type
 export type RecordString = Record<string, string>;
+
+export type TMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => void | Promise<void>;
+
+export type Middlewares = {
+  path: string;
+  middleware: TMiddleware;
+};
+
+export interface IMiddlewares {
+  use: (
+    pathOrMiddleware: string | TMiddleware[],
+    middleware?: TMiddleware[]
+  ) => void | Promise<void>;
+
+  execute: (
+    req: Request,
+    res: Response,
+    handler: Handler
+  ) => void | Promise<void>;
+}

@@ -3,16 +3,19 @@ import { EventEmitter } from "node:events";
 import { Request } from "./Request";
 import { Response } from "./Response";
 import { Router } from "./Router";
-import { Handler, HTTPMethods } from "./types";
+import { Handler, IMiddlewares, TMiddleware } from "./types";
+import { Middleware } from "./Middleware";
 
 export class Server extends EventEmitter {
   private server: ReturnType<typeof createServer>;
   private router: Router;
+  private middleware: IMiddlewares;
 
   constructor() {
     super();
     this.server = createServer(this.requestHandler.bind(this));
     this.router = new Router();
+    this.middleware = new Middleware();
   }
 
   private requestHandler = async (
@@ -28,37 +31,48 @@ export class Server extends EventEmitter {
 
     // Route Matching
     const router = this.router.match(request.method, request.path);
+    console.log(router?.originalPath);
+    request.params = router?.params || {};
+    request.declarationPath = router?.originalPath || "";
 
-    if (!router) {
-      response.status(404).json({
-        message: "Resources not found",
-      });
-      return;
-    }
+    const handler = router
+      ? router.handler
+      : () => {
+          response.status(404).json({
+            message: "Resources not found",
+          });
+          return;
+        };
 
-    const { handler, params, originalPath } = router;
-    request.params = params || {};
-    request.declarationPath = originalPath || "";
-    handler(request, response);
+    await this.middleware.execute(request, response, handler);
   };
 
-  get(path: string, handler: Handler) {
+  use(path: string | TMiddleware[], middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
+  }
+
+  get(path: string, handler: Handler, middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
     this.router.add("GET", path, handler);
   }
 
-  post(path: string, handler: Handler) {
+  post(path: string, handler: Handler, middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
     this.router.add("POST", path, handler);
   }
 
-  patch(path: string, handler: Handler) {
+  patch(path: string, handler: Handler, middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
     this.router.add("PATCH", path, handler);
   }
 
-  put(path: string, handler: Handler) {
+  put(path: string, handler: Handler, middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
     this.router.add("PUT", path, handler);
   }
 
-  delete(path: string, handler: Handler) {
+  delete(path: string, handler: Handler, middlewares: TMiddleware[] = []) {
+    this.middleware.use(path, middlewares);
     this.router.add("DELETE", path, handler);
   }
 
