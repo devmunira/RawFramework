@@ -50,16 +50,13 @@ export class Middleware implements IMiddlewares {
       }
 
       const { path, middleware } = this.middlewares[index++];
-      console.log({ path, middleware });
 
       if (path && !req.declarationPath.startsWith(path)) {
-        console.log("Not Execute", { path, dec: req.declarationPath });
         await next();
         return;
       }
 
       await middleware(req, res, next);
-      console.log("Execute", path);
     };
     await next();
   }

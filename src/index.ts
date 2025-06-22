@@ -1,15 +1,9 @@
-import { createApp } from "./Espresso";
-import { Request } from "./Espresso/Request";
-import { Response } from "./Espresso/Response";
+import { createApp, Request, Response } from "./Espresso";
+import { CustomLogger } from "./middlewares/customLog";
 
 const app = createApp();
 
-app.use([
-  (req, res, next) => {
-    console.log("I am global Middleware");
-    next();
-  },
-]);
+app.use([CustomLogger()]);
 
 app.get(
   "/",

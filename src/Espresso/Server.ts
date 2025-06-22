@@ -31,7 +31,7 @@ export class Server extends EventEmitter {
 
     // Route Matching
     const router = this.router.match(request.method, request.path);
-    console.log(router?.originalPath);
+
     request.params = router?.params || {};
     request.declarationPath = router?.originalPath || "";
 

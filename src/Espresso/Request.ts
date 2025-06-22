@@ -30,8 +30,6 @@ export class Request implements IRequest {
     buffer: Buffer,
     contentType: string
   ): MultipartFormData {
-    console.log("Parsing multipart with content-type:", contentType);
-
     // Extract boundary from content-type header - handle different formats
     // Try multiple regex patterns to catch different boundary formats
     let boundaryMatch = contentType.match(/boundary=(.+)$/i);
@@ -121,11 +119,9 @@ export class Request implements IRequest {
           size: contentBuffer.length,
         };
         files[fieldName] = fileData;
-        console.log("Found file:", fieldName, filename);
       } else {
         // This is a regular form field
         fields[fieldName] = contentBuffer.toString();
-        console.log("Found field:", fieldName, contentBuffer.toString());
       }
     }
 
@@ -221,9 +217,7 @@ export class Request implements IRequest {
     } else if (contentTypeLower === "application/x-www-form-urlencoded") {
       try {
         const urlEncodedData = new URLSearchParams(buffer.toString());
-        console.log(urlEncodedData, urlEncodedData.entries());
         this.body = Object.fromEntries(urlEncodedData.entries());
-        console.log(this.body);
         return;
       } catch {
         this.body = null;
