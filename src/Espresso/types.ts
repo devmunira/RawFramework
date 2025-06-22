@@ -5,7 +5,13 @@ import { Request } from "./Request";
 /***
  * Allowed methods: get, post, put, patch, delete
  */
-export type HTTPMethods = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+export type HTTPMethods =
+  | "GET"
+  | "POST"
+  | "PUT"
+  | "PATCH"
+  | "DELETE"
+  | "OPTIONS";
 
 // File data interface for multipart form data
 export interface FileData {
