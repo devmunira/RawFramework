@@ -11,7 +11,7 @@ const app = createApp();
 // Global Middleware
 app.use([
   CustomLogger(),
-  staticFiles(path.join(__dirname, "public")),
+  staticFiles(path.join(__dirname, "../public")),
   cors({
     origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "OPTIONS"],
