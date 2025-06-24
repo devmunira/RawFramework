@@ -12,18 +12,18 @@ const app = createApp();
 app.use([
   CustomLogger(),
   staticFiles(path.join(__dirname, "public")),
-  cors({
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "X-Requested-With",
-      "X-CSRF-Token",
-      "X-API-Key",
-      "Range",
-    ],
-    credentials: true,
-  }),
+  // cors({
+  //   methods: ["GET", "POST", "OPTIONS"],
+  //   allowedHeaders: [
+  //     "Content-Type",
+  //     "Authorization",
+  //     "X-Requested-With",
+  //     "X-CSRF-Token",
+  //     "X-API-Key",
+  //     "Range",
+  //   ],
+  //   credentials: true,
+  // }),
 ]);
 
 // Define Router
