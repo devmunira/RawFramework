@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "title": "Optimizing Web Performance with Cache Control",
+    "author": "Munira Akter",
+    "date": "2024-01-15",
+    "content": "Learn how to implement effective cache control strategies to significantly improve your web application's performance. This comprehensive guide covers HTTP caching headers, browser caching, and server-side caching techniques.",
+    "tags": ["web performance", "caching", "http", "optimization"],
+    "image": "/images/posts/cache-control.jpg",
+    "videourl": null,
+    "readTime": "8 min read",
+    "category": "Performance",
+    "url": "https://medium.com/@muniraweb/optimizing-web-performance-with-cache-control-a328a6415b3f",
+    "attachments": []
+  },
+  {
+    "id": 2,
+    "title": "Mastering Soft Skills: Essential Traits for Career Success as a Software Engineer",
+    "author": "Munira Akter",
+    "date": "2024-01-10",
+    "content": "Discover the crucial soft skills that every software engineer needs to succeed in their career. From communication and teamwork to problem-solving and adaptability, learn how to develop these essential traits.",
+    "tags": ["soft skills", "career development", "engineering", "leadership"],
+    "image": "/images/posts/soft-skills.jpg",
+    "videourl": null,
+    "readTime": "12 min read",
+    "category": "Career",
+    "url": "https://medium.com/@muniraweb/mastering-soft-skills-essential-traits-for-career-success-as-a-software-engineer-munira-akter-cc97fd6d0386",
+    "attachments": []
+  },
+  {
+    "id": 3,
+    "title": "Choosing the Right Logging Framework for Your Node.js Application: Winston vs Pino",
+    "author": "Munira Akter",
+    "date": "2024-01-05",
+    "content": "A detailed comparison of Winston and Pino logging frameworks for Node.js applications. Understand the differences in performance, features, and use cases to make the best choice for your project.",
+    "tags": ["node.js", "logging", "winston", "pino", "performance"],
+    "image": "/images/posts/logging-frameworks.jpg",
+    "videourl": null,
+    "readTime": "10 min read",
+    "category": "Backend",
+    "url": "https://medium.com/@muniraweb/choosing-the-right-logging-framework-for-your-node-js-application-winston-vs-pino-31ee720ab7ee",
+    "attachments": []
+  },
+  {
+    "id": 4,
+    "title": "Demystifying Server Costs: Node.js Efficiency and Scaling in Simple Terms",
+    "author": "Munira Akter",
+    "date": "2023-12-20",
+    "content": "Understand server costs and Node.js scaling in simple, practical terms. Learn about resource optimization, cost-effective deployment strategies, and how to scale your applications efficiently.",
+    "tags": [
+      "server costs",
+      "node.js",
+      "scaling",
+      "deployment",
+      "optimization"
+    ],
+    "image": "/images/posts/server-costs.jpg",
+    "videourl": null,
+    "readTime": "15 min read",
+    "category": "DevOps",
+    "url": "https://medium.com/@muniraweb/demystifying-server-costs-node-js-efficiency-and-scaling-in-simple-terms-0d053a33c19b",
+    "attachments": []
+  },
+  {
+    "id": 5,
+    "title": "Understanding Time Complexity in Algorithms",
+    "author": "Munira Akter",
+    "date": "2023-12-15",
+    "content": "A beginner-friendly guide to understanding time complexity in algorithms. Learn about Big O notation, common complexity classes, and how to analyze algorithm efficiency.",
+    "tags": [
+      "algorithms",
+      "time complexity",
+      "big o notation",
+      "computer science"
+    ],
+    "image": "/images/posts/time-complexity.jpg",
+    "videourl": null,
+    "readTime": "14 min read",
+    "category": "Computer Science",
+    "url": "https://medium.com/@muniraweb/understanding-time-complexity-in-algorithms-3930a3238f6d",
+    "attachments": []
+  },
+  {
+    "id": 6,
+    "title": "The Importance of Data Structures and Algorithms in Programming",
+    "author": "Munira Akter",
+    "date": "2023-12-10",
+    "content": "Explore why data structures and algorithms are fundamental to programming. Learn how they impact code efficiency, problem-solving skills, and career growth in software development.",
+    "tags": [
+      "data structures",
+      "algorithms",
+      "programming",
+      "computer science",
+      "problem solving"
+    ],
+    "image": "/images/posts/data-structures.jpg",
+    "videourl": null,
+    "readTime": "11 min read",
+    "category": "Computer Science",
+    "url": "https://medium.com/@muniraweb/the-importance-of-data-structures-and-algorithms-in-programming-2d672a4c6b10",
+    "attachments": []
+  }
+]

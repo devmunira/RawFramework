@@ -38,10 +38,7 @@ export class Server extends EventEmitter {
     const handler = router
       ? router.handler
       : () => {
-          response.status(404).json({
-            message: "Resources not found",
-          });
-          return;
+          response.status(404).redirect("/not-found");
         };
 
     await this.middleware.execute(request, response, handler);

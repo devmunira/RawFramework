@@ -6,6 +6,7 @@ import {
   RequestFormatter,
   ConsoleTransporter,
 } from "../Espresso/lib/logger";
+import crypto from "crypto";
 
 type MyMorganOptions = {
   logger?: Logger;
@@ -103,8 +104,6 @@ export const CustomLogger = (options: MyMorganOptions = {}): TMiddleware => {
         statusLogLevel = "error";
       } else if (res.nodeResponse.statusCode >= 400) {
         statusLogLevel = "warn";
-      } else if (res.nodeResponse.statusCode >= 300) {
-        statusLogLevel = "info";
       } else if (res.nodeResponse.statusCode >= 200) {
         statusLogLevel = "info";
       }

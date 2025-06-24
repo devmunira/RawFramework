@@ -1,0 +1,66 @@
+{
+  "banner": {
+    "title": "Welcome to My Own Build Template Engine Website!",
+    "subtitle": "I am excited to have built this entire framework from scratch to deepen my fundamental knowledge.",
+    "image": "/images/banner.jpg"
+  },
+  "project": {
+    "title": "About This Project",
+    "subtitle": "A Custom Web Framework Built from Scratch",
+    "description": "This website is powered by my own custom web framework called <strong>'Espresso'</strong> - a lightweight, fast, and modular framework built entirely from scratch using TypeScript and Node.js. No external frameworks or libraries were used in the core implementation.",
+    "features": [
+      "Custom Router with parameter support",
+      "Template Engine with partials and helpers",
+      "Middleware system for request processing",
+      "Static file serving",
+      "JSON data integration",
+      "TypeScript support throughout",
+      "Modular architecture",
+      "Trie-based router system for efficient routing",
+      "Streaming video support with range requests",
+      "File attachment handling with download support",
+      "Custom logger similar to Morgan with colorized output",
+      "CORS middleware for cross-origin requests",
+      "Advanced middleware pipeline with error handling"
+    ],
+    "techStack": {
+      "core": ["TypeScript", "Node.js", "Custom Router", "Template Engine"],
+      "features": [
+        "Middleware System",
+        "Static File Server",
+        "JSON Data Binding",
+        "Trie Router",
+        "Streaming Support"
+      ],
+      "architecture": [
+        "Modular Design",
+        "Type Safety",
+        "Performance Optimized",
+        "Range Requests",
+        "File Handling"
+      ]
+    },
+    "advancedFeatures": {
+      "router": "Trie data structure for O(k) route matching where k is the path length",
+      "streaming": "Video streaming with HTTP range requests and partial content support",
+      "attachments": "File download system with proper headers and streaming",
+      "logger": "Custom logging system with multiple transports and formatters",
+      "cors": "Cross-Origin Resource Sharing middleware with configurable options"
+    },
+    "github": "https://github.com/devmunira/RawFramework",
+    "linkedin": "https://www.linkedin.com/in/muniraakter/"
+  },
+  "about": {
+    "heading": "About Me",
+    "description": "Software Engineer <br> I am a passionate software engineer with 3 years of experience crafting scalable and performant web applications. Specializing in JavaScript, TypeScript, and PHP, I work across the stack using technologies like React, Next.js, NestJS, and Laravel to deliver clean, user-focused solutions. <br><br> With a strong foundation in microservices, I enjoy architecting systems that are modular, efficient, and easy to maintain. My development toolkit includes RabbitMQ, Redis, and PostgreSQL, and I consistently apply best practices such as SOLID principles and OOP in my code. <br><br> A continuous learner of DevOps and cloud-native development, I leverage AWS and DigitalOcean to automate deployments and optimize system performance. I've designed and maintained CI/CD pipelines using tools like GitHub Actions, Jenkins, and SonarQube to ensure rapid and reliable software delivery.<br><br> Throughout my career, I've led the development of complex platforms, including membership portals and e-commerce systems, serving thousands of users and driving measurable business outcomes—such as a 90% cost reduction and 70% increase in renewals. <br><br> Let's connect to share ideas and explore how we can build secure, scalable, and user-centered software together!",
+    "image": "/assets/images/profile.png"
+  },
+  "contact": {
+    "email": "muniraa.nz@gmail.com",
+    "phone": "+64226055211",
+    "address": "Auckland, New Zealand",
+    "linkedin": "https://www.linkedin.com/in/muniraakter/",
+    "medium": "https://medium.com/@muniraweb",
+    "github": "https://github.com/devmunira"
+  }
+}

@@ -48,7 +48,14 @@ export interface IResponse {
   setHeaders(key: string, value: string): this;
   send(body: string | object | Buffer | null | File): this;
   json(body: object): this;
-  view(body: File): this;
+  view(path: string): this;
+  stream(readable: NodeJS.ReadableStream): this;
+  pipe(readable: NodeJS.ReadableStream): this;
+  render(template: string, data: object): Promise<this>;
+  redirect(url: string): this;
+  type(contentType: string): this;
+  attachment(filename: string): this;
+  etag(etag: string): this;
 }
 
 // Types of routes

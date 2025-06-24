@@ -1,0 +1,275 @@
+{{> header }} {{> nav }}
+
+<main class="main">
+  <section class="content-section">
+    <div style="text-align: center; margin-bottom: 3rem">
+      <h1>Get in Touch</h1>
+      <p
+        style="
+          max-width: 600px;
+          margin: 0 auto;
+          color: #64748b;
+          line-height: 1.6;
+        ">
+        I'm always open to discussing new opportunities, interesting projects,
+        or just having a chat about technology and software development.
+      </p>
+    </div>
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      ">
+      <!-- Contact Information -->
+      <div
+        style="
+          background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+          padding: 2rem;
+          border-radius: 1rem;
+          border: 1px solid #e2e8f0;
+        ">
+        <h3
+          style="
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+          ">
+          Contact Information
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem">
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              📧
+            </div>
+            <div>
+              <h4 style="margin: 0 0 0.25rem 0; color: #1e293b">Email</h4>
+              <a
+                href="mailto:{{data.contact.email}}"
+                style="
+                  color: #64748b;
+                  text-decoration: none;
+                  font-size: 0.95rem;
+                "
+                >{{data.contact.email}}</a
+              >
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              📞
+            </div>
+            <div>
+              <h4 style="margin: 0 0 0.25rem 0; color: #1e293b">Phone</h4>
+              <a
+                href="tel:{{data.contact.phone}}"
+                style="
+                  color: #64748b;
+                  text-decoration: none;
+                  font-size: 0.95rem;
+                "
+                >{{data.contact.phone}}</a
+              >
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              📍
+            </div>
+            <div>
+              <h4 style="margin: 0 0 0.25rem 0; color: #1e293b">Location</h4>
+              <span style="color: #64748b; font-size: 0.95rem"
+                >{{data.contact.address}}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div
+        style="
+          background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+          padding: 2rem;
+          border-radius: 1rem;
+          border: 1px solid #bae6fd;
+        ">
+        <h3
+          style="
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+          ">
+          Connect With Me
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem">
+          <a
+            href="{{data.contact.linkedin}}"
+            target="_blank"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1rem;
+              background: white;
+              border-radius: 0.5rem;
+              text-decoration: none;
+              color: #1e293b;
+              transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+              border: 1px solid #e2e8f0;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: #0077b5;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              💼
+            </div>
+            <div>
+              <h4 style="margin: 0; color: #1e293b">LinkedIn</h4>
+              <span style="color: #64748b; font-size: 0.9rem"
+                >Professional Network</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="{{data.contact.github}}"
+            target="_blank"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1rem;
+              background: white;
+              border-radius: 0.5rem;
+              text-decoration: none;
+              color: #1e293b;
+              transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+              border: 1px solid #e2e8f0;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: #333;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              🐙
+            </div>
+            <div>
+              <h4 style="margin: 0; color: #1e293b">GitHub</h4>
+              <span style="color: #64748b; font-size: 0.9rem"
+                >Code & Projects</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="{{data.contact.medium}}"
+            target="_blank"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1rem;
+              background: white;
+              border-radius: 0.5rem;
+              text-decoration: none;
+              color: #1e293b;
+              transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+              border: 1px solid #e2e8f0;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: #000;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              ">
+              📝
+            </div>
+            <div>
+              <h4 style="margin: 0; color: #1e293b">Medium</h4>
+              <span style="color: #64748b; font-size: 0.9rem"
+                >Blog & Articles</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}

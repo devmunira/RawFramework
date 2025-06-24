@@ -1,0 +1,246 @@
+{{> header }} {{> nav }}
+
+<main class="main">
+  <section class="content-section">
+    <h1>{{data.banner.title}}</h1>
+    <h4>{{data.banner.subtitle}}</h4>
+    <a class="btn-submit" href="/download-file">Download File</a>
+  </section>
+
+  <section class="content-section" id="project">
+    <h2>{{data.project.title}}</h2>
+    <h4 style="color: var(--primary-color); margin-bottom: 1rem">
+      {{data.project.subtitle}}
+    </h4>
+    <p style="margin-bottom: 2rem">{{{data.project.description}}}</p>
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      ">
+      <div>
+        <h3>Core Features</h3>
+        <ul style="list-style: none; padding: 0">
+          {{#each data.project.features}}
+          <li
+            style="
+              padding: 0.5rem 0;
+              border-bottom: 1px solid #eee;
+              display: flex;
+              align-items: center;
+            ">
+            <span style="color: var(--primary-color); margin-right: 0.5rem"
+              >✓</span
+            >
+            {{item}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Tech Stack</h3>
+        <div style="margin-bottom: 1rem">
+          <strong>Core:</strong>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              margin-top: 0.5rem;
+            ">
+            {{#each data.project.techStack.core}}
+            <span
+              style="
+                background: var(--primary-color);
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.8rem;
+              "
+              >{{item}}</span
+            >
+            {{/each}}
+          </div>
+        </div>
+        <div style="margin-bottom: 1rem">
+          <strong>Features:</strong>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              margin-top: 0.5rem;
+            ">
+            {{#each data.project.techStack.features}}
+            <span
+              style="
+                background: #6b7280;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.8rem;
+              "
+              >{{item}}</span
+            >
+            {{/each}}
+          </div>
+        </div>
+        <div>
+          <strong>Architecture:</strong>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              margin-top: 0.5rem;
+            ">
+            {{#each data.project.techStack.architecture}}
+            <span
+              style="
+                background: #059669;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.8rem;
+              "
+              >{{item}}</span
+            >
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 2rem">
+      <h3>Advanced Features</h3>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        ">
+        <div
+          style="
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+          ">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem">
+            Trie Router
+          </h4>
+          <p style="font-size: 0.9rem; margin: 0">
+            {{data.project.advancedFeatures.router}}
+          </p>
+        </div>
+        <div
+          style="
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+          ">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem">
+            Video Streaming
+          </h4>
+          <p style="font-size: 0.9rem; margin: 0">
+            {{data.project.advancedFeatures.streaming}}
+          </p>
+        </div>
+        <div
+          style="
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+          ">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem">
+            File Attachments
+          </h4>
+          <p style="font-size: 0.9rem; margin: 0">
+            {{data.project.advancedFeatures.attachments}}
+          </p>
+        </div>
+        <div
+          style="
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+          ">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem">
+            Custom Logger
+          </h4>
+          <p style="font-size: 0.9rem; margin: 0">
+            {{data.project.advancedFeatures.logger}}
+          </p>
+        </div>
+        <div
+          style="
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+          ">
+          <h4 style="color: var(--primary-color); margin-bottom: 0.5rem">
+            CORS Middleware
+          </h4>
+          <p style="font-size: 0.9rem; margin: 0">
+            {{data.project.advancedFeatures.cors}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+      <a href="{{data.project.github}}" target="_blank" class="btn-submit"
+        >View on GitHub</a
+      >
+      <a
+        href="{{data.project.download}}"
+        class="btn-submit"
+        style="background: #044977"
+        >Let's Connect on LinkedIn</a
+      >
+    </div>
+  </section>
+
+  <section class="content-section" id="about">
+    <h2 style="padding: 10px 0px">{{data.about.heading}}</h2>
+    <div style="display: flex; align-items: start; gap: 2rem; flex-wrap: wrap">
+      <img
+        src="{{data.about.image}}"
+        alt="About Photo"
+        style="
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 0.5rem;
+          box-shadow: var(--shadow);
+          background: #fff;
+        " />
+      <p style="flex: 1; min-width: 220px">{{{data.about.description}}}</p>
+    </div>
+  </section>
+
+  <section class="content-section" id="contact">
+    <h2>Contact</h2>
+    <ul style="list-style: none; padding: 0">
+      <li>
+        <strong>Email:</strong>
+        <a href="mailto:{{data.contact.email}}">{{data.contact.email}}</a>
+      </li>
+      <li>
+        <strong>Phone:</strong>
+        <a href="tel:{{data.contact.phone}}">{{data.contact.phone}}</a>
+      </li>
+      <li><strong>Address:</strong> {{data.contact.address}}</li>
+    </ul>
+  </section>
+</main>
+
+{{> footer }}

@@ -1,0 +1,194 @@
+{{> header }} {{> nav }}
+
+<main class="main">
+  <section class="content-section">
+    <div style="text-align: center; margin-bottom: 3rem">
+      <h1>Blog Posts</h1>
+      <p
+        style="
+          max-width: 600px;
+          margin: 0 auto;
+          color: #64748b;
+          line-height: 1.6;
+        ">
+        Insights, tutorials, and thoughts on software engineering, performance
+        optimization, and career development.
+      </p>
+    </div>
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      ">
+      {{#each data}}
+      <article
+        style="
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 1rem;
+          overflow: hidden;
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+          cursor: pointer;
+        ">
+        <div
+          style="
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+          ">
+          <div
+            style="
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              background: rgba(255, 255, 255, 0.9);
+              color: #333;
+              padding: 0.25rem 0.75rem;
+              border-radius: 1rem;
+              font-size: 0.75rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            ">
+            {{item.category}}
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 1rem;
+              right: 1rem;
+              background: rgba(0, 0, 0, 0.7);
+              color: white;
+              padding: 0.25rem 0.75rem;
+              border-radius: 1rem;
+              font-size: 0.75rem;
+            ">
+            {{item.readTime}}
+          </div>
+        </div>
+
+        <div style="padding: 1.5rem">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              margin-bottom: 0.5rem;
+            ">
+            <div
+              style="
+                width: 8px;
+                height: 8px;
+                background: #10b981;
+                border-radius: 50%;
+              "></div>
+            <span style="font-size: 0.875rem; color: #64748b"
+              >{{item.author}}</span
+            >
+            <span style="font-size: 0.875rem; color: #64748b">•</span>
+            <span style="font-size: 0.875rem; color: #64748b"
+              >{{item.date}}</span
+            >
+          </div>
+
+          <h3
+            style="
+              margin: 0 0 1rem 0;
+              font-size: 1.25rem;
+              line-height: 1.4;
+              color: #1e293b;
+            ">
+            <a
+              href="{{url}}"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >{{item.title}}</a
+            >
+          </h3>
+
+          <p
+            style="
+              color: #64748b;
+              line-height: 1.6;
+              margin-bottom: 1.5rem;
+              font-size: 0.95rem;
+            ">
+            {{item.content}}
+          </p>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            ">
+            <a
+              href="{{item.url}}"
+              target="_blank"
+              style="
+                background: var(--primary-color);
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.2s ease;
+                font-size: 0.875rem;
+              "
+              onmouseover="this.style.background='#1e40af'"
+              onmouseout="this.style.background='var(--primary-color)'">
+              Read on Medium
+            </a>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem">
+              <svg
+                style="width: 16px; height: 16px; fill: #64748b"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+              <span style="font-size: 0.875rem; color: #64748b">Medium</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem">
+      <p style="color: #64748b; margin-bottom: 1rem">Want to read more?</p>
+      <a
+        href="https://medium.com/@muniraweb"
+        target="_blank"
+        style="
+          background: #000;
+          color: white;
+          padding: 0.75rem 2rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background 0.2s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+        "
+        onmouseover="this.style.background='#333'"
+        onmouseout="this.style.background='#000'">
+        <svg
+          style="width: 20px; height: 20px; fill: currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+        </svg>
+        Follow on Medium
+      </a>
+    </div>
+  </section>
+</main>
+
+{{> footer }}

@@ -1,0 +1,114 @@
+{
+  "heading": "About Me",
+  "description": "I am a passionate full-stack developer with a strong foundation in web technologies and a drive to create innovative solutions. I love building things from scratch and understanding the fundamentals of how systems work.",
+  "mission": "To create robust, scalable applications and continuously improve my technical skills through hands-on projects and learning.",
+  "vision": "To become a leading developer who builds efficient, user-friendly applications that solve real-world problems.",
+  "skills": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue.js",
+      "Bootstrap",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Django",
+      "PHP",
+      "Laravel",
+      "REST APIs",
+      "GraphQL"
+    ],
+    "databases": ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+    "tools": ["Git", "Docker", "AWS", "Heroku", "VS Code", "Postman"],
+    "other": [
+      "Microservices",
+      "RESTful APIs",
+      "Agile Development",
+      "Responsive Design"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "Freelance",
+      "duration": "2023 - Present",
+      "description": "Building custom web applications and frameworks from scratch, focusing on performance and user experience."
+    },
+    {
+      "title": "Web Developer",
+      "company": "Various Projects",
+      "duration": "2022 - 2023",
+      "description": "Developed responsive websites and web applications using modern technologies and best practices."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Custom Template Engine Framework",
+      "description": "Built a complete web framework from scratch to understand fundamental concepts and improve technical knowledge.",
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Custom Router",
+        "Template Engine"
+      ],
+      "github": "https://github.com/devmunira/rawFramework",
+      "live": "#"
+    },
+    {
+      "name": "E-commerce Microservices",
+      "description": "Developed a practical microservices-based e-commerce application with multiple services.",
+      "technologies": ["Microservices", "Node.js", "Docker", "REST APIs"],
+      "github": "https://github.com/devmunira/practical_microservioce_ecommerce",
+      "live": null
+    },
+    {
+      "name": "Member Lounge App",
+      "description": "Created a membership management application with modern UI/UX design.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "github": null,
+      "live": "https://memberlounge.app/"
+    },
+    {
+      "name": "StrataCore (Enterprise Node.js Framework)",
+      "description": "This is a production-ready Node.js framework built with TypeScript that implements enterprise-level design patterns and provides a robust foundation for building scalable REST APIs. The framework is designed to eliminate boilerplate code, enforce best practices, and provide a consistent development experience across different database drivers.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "github": "https://github.com/devmunira/StrataCore",
+      "live": "#"
+    },
+    {
+      "name": "A Personal Finance Management System. REST API",
+      "description": "The Personal Finance Management System is a web application designed to empower users to manage their financial activities seamlessly. Project Motive To provide users with free financial services while leveraging user data for business insights.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "github": "https://github.com/devmunira/wallet_rest_api_v1",
+      "live": "#"
+    },
+    {
+      "name": "SOLID Principles Implementation Practice Project.",
+      "description": "A hands-on collection of projects applying SOLID principles to real-world scenarios. Focused on building scalable, maintainable systems using TypeScript and key design patterns like Factory, Strategy, and Adapter. Emphasized clean architecture, modular design, and extensibility. Demonstrates a strong grasp of object-oriented design and commitment to writing clean, robust code.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "github": "https://github.com/devmunira/solid-case-studies",
+      "live": "#"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Computer Science",
+      "institution": "Self-taught & Online Courses",
+      "year": "Ongoing",
+      "description": "Continuously learning through online platforms, documentation, and hands-on projects."
+    }
+  ],
+  "contact": {
+    "email": "muniraa.nz@gmail.com",
+    "phone": "+64226055211",
+    "location": "Auckland, New Zealand",
+    "github": "https://github.com/devmunira",
+    "linkedin": "https://linkedin.com/in/muniraakter"
+  }
+}

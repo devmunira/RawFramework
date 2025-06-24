@@ -1,0 +1,200 @@
+{{> header }} {{> nav }}
+
+<main class="main">
+  <section class="content-section">
+    <h1>{{data.heading}}</h1>
+    <p>{{data.description}}</p>
+
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+      ">
+      <img
+        src="/assets/images/profile.png"
+        alt="Profile Photo"
+        style="
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 0.5rem;
+          box-shadow: var(--shadow);
+          background: #fff;
+        " />
+      <div style="flex: 1; min-width: 300px">
+        <h3>Mission</h3>
+        <p>{{data.mission}}</p>
+        <h3>Vision</h3>
+        <p>{{data.vision}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Skills</h2>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      ">
+      <div>
+        <h3>Frontend</h3>
+        <ul style="list-style: none; padding: 0">
+          {{#each data.skills.frontend}}
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee">
+            {{item}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+        <h3>Backend</h3>
+        <ul style="list-style: none; padding: 0">
+          {{#each data.skills.backend}}
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee">
+            {{item}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+        <h3>Databases</h3>
+        <ul style="list-style: none; padding: 0">
+          {{#each data.skills.databases}}
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee">
+            {{item}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+        <h3>Tools & Others</h3>
+        <ul style="list-style: none; padding: 0">
+          {{#each data.skills.tools}}
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee">
+            {{item}}
+          </li>
+          {{/each}} {{#each data.skills.other}}
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee">
+            {{item}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Experience</h2>
+    {{#each data.experience}}
+    <div
+      style="
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border: 1px solid #eee;
+        border-radius: 0.5rem;
+      ">
+      <h3>{{item.title}}</h3>
+      <p
+        style="color: var(--primary-color); font-weight: 600; margin: 0.5rem 0">
+        {{item.company}} | {{item.duration}}
+      </p>
+      <p>{{item.description}}</p>
+    </div>
+    {{/each}}
+  </section>
+
+  <section class="content-section">
+    <h2>Education</h2>
+    {{#each data.education}}
+    <div style="padding: 1.5rem; border: 1px solid #eee; border-radius: 0.5rem">
+      <h3>{{item.degree}}</h3>
+      <p
+        style="color: var(--primary-color); font-weight: 600; margin: 0.5rem 0">
+        {{item.institution}} | {{item.year}}
+      </p>
+      <p>{{item.description}}</p>
+    </div>
+    {{/each}}
+  </section>
+
+  <section class="content-section" style="padding: 2rem 1rem">
+    <h2>Projects</h2>
+
+    {{#each data.projects}}
+    <div
+      style="
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        background-color: #fafafa;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease;
+        margin: 20px 0px;
+      ">
+      <h3 style="margin: 0; font-size: 1.2rem; color: #333">{{item.name}}</h3>
+      <p
+        style="
+          margin: 0 0 1rem;
+          color: #555;
+          font-size: 0.95rem;
+          line-height: 1.5;
+        ">
+        {{item.description}}
+      </p>
+
+      <div style="display: flex; gap: 0.75rem">
+        <a
+          href="{{item.github}}"
+          target="_blank"
+          style="font-size: 0.85rem; text-decoration: none; color: #0366d6">
+          View Code
+        </a>
+
+        <a
+          href="{{item.live}}"
+          target="_blank"
+          style="font-size: 0.85rem; text-decoration: none; color: #0366d6">
+          View Demo
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </section>
+
+  <section class="content-section">
+    <h2>Contact</h2>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      ">
+      <div>
+        <strong>Email:</strong><br />
+        <a href="mailto:{{data.contact.email}}">{{data.contact.email}}</a>
+      </div>
+      <div>
+        <strong>Phone:</strong><br />
+        <a href="tel:{{data.contact.phone}}">{{data.contact.phone}}</a>
+      </div>
+      <div>
+        <strong>Location:</strong><br />
+        {{data.contact.location}}
+      </div>
+      <div>
+        <strong>GitHub:</strong><br />
+        <a href="{{data.contact.github}}" target="_blank">devmunira</a>
+      </div>
+      <div>
+        <strong>LinkedIn:</strong><br />
+        <a href="{{data.contact.linkedin}}" target="_blank">muniraakter</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
